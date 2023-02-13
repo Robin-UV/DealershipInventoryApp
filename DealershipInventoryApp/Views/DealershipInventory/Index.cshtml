@@ -1,0 +1,88 @@
+﻿@model DealershipInventoryViewModel
+@using DealershipInventoryApp.DataAccess.EF.Models
+
+
+<script type="text/javascript">
+    function openLocation(url) {
+        window.location.href = url; 
+    }
+
+    function confirmDelete(id) {
+        $("#hdnDeleteVehicleId").val(id);
+        openModal("deleteModal");
+    }
+
+    function candelDelete() {
+        $("#hdnDeleteVehicleId").val(0);
+        closeModel("deleteModal"); 
+    }
+
+    function deleteVehicle() {
+        var id = $("#hdnDeleteVehicleId").val();
+        window.location.href = "/DealershipInventry/Delete/" + id; 
+    }
+</script>
+
+<input type="hidden" id="hdnDeleteVehicleId" value="0" />
+
+<div class="text-center">
+    @if (!String.IsNullOrEmpty(Model.ActionMessage))
+        {
+            string colorClass = Model.IsActionSuccess ? "alert-success" : "alert-danger";
+
+            <div class="alert @colorClass alert-dismissible fade show" role="alert">
+                <strong>@Model.ActionMessage</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        }
+
+    <h1 class="display-3">Dealership Vehicle Inventory</h1>
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <table class="table">
+                <tr>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Body Type</th>
+                    <th>Trim Level</th>
+                    <th>Year</th>
+                    <th>Miles</th>
+                    <th>Price</th>
+                    <th colspan="2"><button type="button" onclick="javascript.openLocation('/DealershipInventory/Update/0')" class="btn btn-secondary btn-sm">ADD NEW VEHICLE</button></th>
+                </tr>
+
+                @foreach (DealershipInventory vehicle in Model.DealershipInventoryList)
+                {
+                    <tr>
+                        <td>@vehicle.Make</td>
+                        <td>@vehicle.Model</td>
+                        <td>@vehicle.BodyType</td>
+                        <td>@vehicle.TrimLevel</td>
+                        <td>@vehicle.Year</td>
+                        <td>@vehicle.Miles</td>
+                        <td>@vehicle.Price</td>
+                        <td><button type="button" onclick="javascript.openLocation('/DealershipInventory/Update/@vehicle.VehicleId')" class="btn btn-secondary btn-sm">Edit</button></td>
+                        <td><button type="button" onclick="javascript.confirmDelete(@vehicle.VehicleId)" class="btn btn-danger btn-sm">Delete</button></td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="deleteModal" class="modal fade" data-backdrop="static" data-keyword="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-centered">
+            <div class="modal-header">
+                <h2 class="modal-title">Confirm DELETE</h2>
+            </div>
+            <div class="modal-body">
+                <p>WARNING: Are you sure you want to delete this vehicle?</p>
+                <button type="button" onclick="javascript.candelDelete()" class="btn btn-secondary btn-sm">Cancel</button>
+                <button type="button" onclick="javascript.ConfirmDelete()" class="btn btn-danger btn sm">DELETE</button>
+            </div>
+        </div>
+    </div>
+</div>

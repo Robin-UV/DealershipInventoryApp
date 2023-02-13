@@ -1,0 +1,14 @@
+/Users/rjuv/Projects/DealershipInventoryApp/DealershipInventoryApp.DataAccess.EF/bin/Debug/net7.0/DealershipInventoryApp.DataAccess.EF.deps.json
+/Users/rjuv/Projects/DealershipInventoryApp/DealershipInventoryApp.DataAccess.EF/bin/Debug/net7.0/DealershipInventoryApp.DataAccess.EF.runtimeconfig.json
+/Users/rjuv/Projects/DealershipInventoryApp/DealershipInventoryApp.DataAccess.EF/bin/Debug/net7.0/DealershipInventoryApp.DataAccess.EF.dll
+/Users/rjuv/Projects/DealershipInventoryApp/DealershipInventoryApp.DataAccess.EF/bin/Debug/net7.0/DealershipInventoryApp.DataAccess.EF.pdb
+/Users/rjuv/Projects/DealershipInventoryApp/DealershipInventoryApp.DataAccess.EF/obj/Debug/net7.0/DealershipInventoryApp.DataAccess.EF.csproj.AssemblyReference.cache
+/Users/rjuv/Projects/DealershipInventoryApp/DealershipInventoryApp.DataAccess.EF/obj/Debug/net7.0/DealershipInventoryApp.DataAccess.EF.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rjuv/Projects/DealershipInventoryApp/DealershipInventoryApp.DataAccess.EF/obj/Debug/net7.0/DealershipInventoryApp.DataAccess.EF.AssemblyInfoInputs.cache
+/Users/rjuv/Projects/DealershipInventoryApp/DealershipInventoryApp.DataAccess.EF/obj/Debug/net7.0/DealershipInventoryApp.DataAccess.EF.AssemblyInfo.cs
+/Users/rjuv/Projects/DealershipInventoryApp/DealershipInventoryApp.DataAccess.EF/obj/Debug/net7.0/DealershipInventoryApp.DataAccess.EF.csproj.CoreCompileInputs.cache
+/Users/rjuv/Projects/DealershipInventoryApp/DealershipInventoryApp.DataAccess.EF/obj/Debug/net7.0/DealershipInventoryApp.DataAccess.EF.dll
+/Users/rjuv/Projects/DealershipInventoryApp/DealershipInventoryApp.DataAccess.EF/obj/Debug/net7.0/refint/DealershipInventoryApp.DataAccess.EF.dll
+/Users/rjuv/Projects/DealershipInventoryApp/DealershipInventoryApp.DataAccess.EF/obj/Debug/net7.0/DealershipInventoryApp.DataAccess.EF.pdb
+/Users/rjuv/Projects/DealershipInventoryApp/DealershipInventoryApp.DataAccess.EF/obj/Debug/net7.0/DealershipInventoryApp.DataAccess.EF.genruntimeconfig.cache
+/Users/rjuv/Projects/DealershipInventoryApp/DealershipInventoryApp.DataAccess.EF/obj/Debug/net7.0/ref/DealershipInventoryApp.DataAccess.EF.dll

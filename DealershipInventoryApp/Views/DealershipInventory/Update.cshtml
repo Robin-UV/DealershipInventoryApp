@@ -1,0 +1,58 @@
+﻿@model DealershipInventoryViewModel
+@using DealershipInventoryApp.DataAccess.EF.Models
+
+@{
+    string pageType = Model.CurrentVehicle.VehicleId > 0 ? "Update Vehicle" : "New Vehicle"; 
+}
+
+<form action="~/DealershipInventory/Index" method="post">
+    <div>
+        <div class="row">
+            <div class="col-7 offset-3 text-center">
+                <h1 class="dasplay-5" style="margin: 25px 0px;">@pageType></h1>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3 form-group">
+                <label>Make: </label>
+                <input type="text" class="form-control" name="make" value="@Model.CurrentVehicle.Make" />
+            </div>
+            <div class="col-md-6 offset-md-3 form-group">
+                <label>Model: </label>
+                <input type="text" class="form-control" name="model" value="@Model.CurrentVehicle.Model" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3 form-group">
+                <label>Body Type: </label>
+                <input type="text" class="form-control" name="bodyType" value="@Model.CurrentVehicle.BodyType" />
+            </div>
+            <div class="col-md-6 offset-md-3 form-group">
+                <label>Trim Level: </label>
+                <input type="text" class="form-control" name="trimLevel" value="@Model.CurrentVehicle.TrimLevel" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3 form-group">
+                <label>Year: </label>
+                <input type="number" class="form-control" name="year" value="@Model.CurrentVehicle.Year" />
+            </div>
+            <div class="col-md-6 offset-md-3 form-group">
+                <label>Miles: </label>
+                <input type="number" class="form-control" name="miles" value="@Model.CurrentVehicle.Miles" />
+            </div>
+            <div class="col-md-6 offset-md-3 form-group">
+                <label>Price: </label>
+                <input type="number" class="form-control" name="price" value="@Model.CurrentVehicle.Price" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3">
+                <button type="button" class="btn btn-secondary" onclick="location.href'/DealershipInventory/Index'">Cancel</button>
+                <button type="submit" class="btn btn-primary">SAVE VEHICLE!</button>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="VehicleID" value="@Model.CurrentVehicle.VehicleId" />
+</form>
+

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DealershipInventoryApp", "DealershipInventoryApp\DealershipInventoryApp.csproj", "{8D45B135-5A92-483D-8A82-9FBE1A2B63B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DealershipInventoryApp.DataAccess.EF", "DealershipInventoryApp.DataAccess.EF\DealershipInventoryApp.DataAccess.EF.csproj", "{83CE6E5D-F361-4273-BC64-2A81BC4C152C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D45B135-5A92-483D-8A82-9FBE1A2B63B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D45B135-5A92-483D-8A82-9FBE1A2B63B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D45B135-5A92-483D-8A82-9FBE1A2B63B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D45B135-5A92-483D-8A82-9FBE1A2B63B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83CE6E5D-F361-4273-BC64-2A81BC4C152C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83CE6E5D-F361-4273-BC64-2A81BC4C152C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83CE6E5D-F361-4273-BC64-2A81BC4C152C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83CE6E5D-F361-4273-BC64-2A81BC4C152C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C079856-BB8E-40B6-A000-E67B87F574D0}
+	EndGlobalSection
+EndGlobal
