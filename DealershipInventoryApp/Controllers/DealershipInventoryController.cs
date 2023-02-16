@@ -25,17 +25,17 @@ namespace DealershipInventoryApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(int vehicleId, string make, string model, string bodyType, string trimLevel, int year, int miles, double price)
+        public IActionResult Index(int vehicleId, string make, string carModel, string bodyType, string trimLevel, short year, int miles, double price)
         {
-            DealershipInventoryViewModel modelView = new DealershipInventoryViewModel(_context);
+            DealershipInventoryViewModel model = new DealershipInventoryViewModel(_context);
 
-            DealershipInventory vehicle = new(vehicleId, make, model, bodyType, trimLevel, year, miles, price);
+            DealershipInventory vehicle = new(vehicleId, make, carModel, bodyType, trimLevel, year, miles, price);
 
-            modelView.SaveVehicle(vehicle);
-            modelView.IsActionSuccess = true;
-            modelView.ActionMessage = "Vehicle has been saved successfully.";
+            model.SaveVehicle(vehicle);
+            model.IsActionSuccess = true;
+            model.ActionMessage = "Vehicle has been saved successfully.";
 
-            return View(modelView); 
+            return View(model); 
         }
 
         public IActionResult Update(int id)

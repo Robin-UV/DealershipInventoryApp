@@ -10,21 +10,21 @@ namespace DealershipInventoryApp.Models
 {
 	public class DealershipInventoryViewModel
 	{
-		private DealershipInventoryRepository _repo = null!;
+		private DealershipInventoryRepository _repo;
 
-		public List<DealershipInventory> DealershipInventoryList { get; set; } = null!;
+		public List<DealershipInventory> DealershipInventoryList { get; set; }
 
-		public DealershipInventory CurrentVehicle { get; set; } = null!;
+		public DealershipInventory CurrentVehicle { get; set; } 
 
 		public bool IsActionSuccess { get; set; }
 
-		public string ActionMessage { get; set; } = null!; 
+		public string ActionMessage { get; set; } 
 
 		public DealershipInventoryViewModel(DealershipInventoryContext context)
 		{
 			_repo = new DealershipInventoryRepository(context);
 			DealershipInventoryList = GetAllVehiclesInInventory();
-			CurrentVehicle = DealershipInventoryList.FirstOrDefault()!; 
+			CurrentVehicle = DealershipInventoryList.FirstOrDefault(); 
         }
 
 		public DealershipInventoryViewModel(DealershipInventoryContext context, int vehicleId)

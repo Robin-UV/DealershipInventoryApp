@@ -18,7 +18,7 @@ namespace DealershipInventoryApp.DataAccess.EF.Context
 
 		}
 
-		public virtual DbSet<DealershipInventory> DealershipInventory { get; set; } = null!; 
+		public virtual DbSet<DealershipInventory> DealershipInventory { get; set; } 
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
@@ -26,7 +26,7 @@ namespace DealershipInventoryApp.DataAccess.EF.Context
 			{
 				entity.HasKey(e => e.VehicleId);
 
-				entity.Property(e => e.VehicleId).HasColumnName("VehicleID");
+				entity.Property(e => e.VehicleId);
 
 				entity.Property(e => e.Make)
 					.IsRequired()
@@ -44,9 +44,9 @@ namespace DealershipInventoryApp.DataAccess.EF.Context
 					.IsRequired()
 					.HasMaxLength(255);
 
-				entity.Property(e => e.Year).HasColumnName("Year");
+				entity.Property(e => e.Year);
 
-				entity.Property(e => e.Miles).HasColumnName("Miles");
+				entity.Property(e => e.Miles);
 
 				entity.Property(e => e.Price).HasColumnType("decimal(14,2)"); 
 			});

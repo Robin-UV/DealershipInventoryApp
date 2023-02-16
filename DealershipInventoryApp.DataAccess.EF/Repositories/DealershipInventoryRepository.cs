@@ -26,7 +26,7 @@ namespace DealershipInventoryApp.DataAccess.EF.Repositories
 
 		public int Update(DealershipInventory vehicle)
 		{
-			DealershipInventory existingVehicle = _dbContext.DealershipInventory.Find(vehicle.VehicleId)!;
+			DealershipInventory existingVehicle = _dbContext.DealershipInventory.Find(vehicle.VehicleId);
 
 			existingVehicle.Make = vehicle.Make;
 			existingVehicle.Model = vehicle.Model;
@@ -59,7 +59,7 @@ namespace DealershipInventoryApp.DataAccess.EF.Repositories
 
 		public DealershipInventory GetVehicleByID(int vehicleID)
 		{
-			DealershipInventory vehicle = _dbContext.DealershipInventory.Find(vehicleID)!;
+			DealershipInventory vehicle = _dbContext.DealershipInventory.Find(vehicleID);
 
 			return vehicle; 
 		}
